@@ -5,7 +5,7 @@
     --normal-font: 400;
     --bold-font: 700;
     --bolder-font: 900;
-    --bg-color: #f3f3f3;
+    --bg-color: transparent;
     --primary-color: #4756df;
     --secondary-color: #ff7235;
     --primary-shadow: #8b8eaf;
@@ -43,6 +43,7 @@
   
   body {
     font-family: var(--font-family);
+    background: #d6bebe;
   }
   nav {
     position: sticky;
@@ -53,7 +54,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 1rem;
-    background-color: var(--bg-color);
+    background: transparent;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
   nav h1 {
@@ -66,18 +67,22 @@
   }
   nav a:hover {
     color: var(--valor-secundario);
-    border-bottom: 2px solid var(--valor-secundario);
+    border-bottom: 3px solid var(--valor-secundario);
   }
   nav ul {
+    font-size: large;
+    font-family: sans-serif;
     position: fixed;
-    background-color: var(--bg-color);
+    background-color: transparent;
+    bottom: 1;
+    font-style: italic;
     flex-direction: column;
     top: 86px;
-    left: 10%;
-    width: 80%;
-    text-align: center;
+    left: 90%;
+    width: 10%;
+    text-align: right;
     transform: translateX(120%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in-out;
   }
 
    nav ul li {
@@ -96,39 +101,7 @@
     transform: translateX(0);
   }
   .sobremi {
-    background-color: var(--bg-color);
-    padding: 1rem 6rem;
-  }
-  
-  .sobremi  h2 {
-    margin-bottom: var(--bottom-margin);
-    text-align: center;
-  }
-  
-  .sobremi  p {
-    line-height: var(--line-height);
-    padding: 0.4rem;
-  }
-  .habilidades {
-    max-width: 68.75rem;
-    margin: auto;
-    text-align: center;
-    margin-top: 2.5rem;
-  }
-  
-  .encabezado-habilidad {
-    margin-bottom: 1rem;
-  }
-  
-  .contenedor-habilidad img {
-    padding: 1.25rem;
-  }
-  
-  .icono {
-    width: 11.875rem;
-    height: 11.25rem;
-  }
-  .introduccion {
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +109,157 @@
     max-width: 68.75rem;
     margin: auto;
   }
-  .intro img {
-    height: 37.5rem;
-    width: 37.5rem;
+  .Simg {
+    height: auto;
+    width: auto;
+  }
+  .sobremi {
+    background-color: var(--bg-color);
+    padding: 1rem 5rem;
+    color: #000;
+  }
+  
+  .sobremi  h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+    color: #000;
+  }
+  .sobremi  p {
+    line-height: var(--line-height);
+    padding: 0.4rem;
+  }
+  .informacion {
+    text-align: justify;
+    color: #000;
+    display: auto;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+
+  }
+  .informacion h3{
+    margin-bottom: var(--bottom-margin);
+    color: #000;
+  }
+  .habilidades {
+    background: transparent;
+    display: auto;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+  }
+  .habilidad h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: left;
+  }
+  .texto{
+    text-align: justify;
+    color: #000;
+
+  }
+  .contenedor-habilidad img {
+    width: 80px;
+    justify-content: center;
+  }
+  
+  .icono {
+    width: 11.875rem;
+    height: 11.25rem;
+  }
+  .educacion {
+    background: transparent;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: left;
+  }
+  .educacion h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: left;
+  }
+  .info-adicional {
+    display: none;
+  }
+  .boton-info {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .boton-info {
+  background-color: transparent; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  }
+  .boton-info:hover {
+  background-color: #4CAF50;
+  color: white;
+  }
+
+  .card {
+    display: inline-flex;
+    text-align: center;
+    background-color: transparent;
+    padding: auto;
+    width: auto;
+    height: auto;
+    margin: 15px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.2);
+    background-color: #f0a7a7;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .card img {
+    width: 80%;
+    height: 100px;
+    object-fit: cover;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .card p {
+    font-size: 1rem;
+    text-align: center;
+    color: #141313;
+    margin-top: 50px;
+    margin-right: auto;
+  }
+  .contenedor-idiomas{
+    width: 80px;
+    justify-content: center;
+  }
+  .idioma {
+    background: transparent;
+    display: auto;
+    text-align: left;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+  }
+  .idioma h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: left;
+  }
+  footer {
+    position: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e2b0b0;
+    color: #f57272;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
   }
